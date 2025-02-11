@@ -1,11 +1,11 @@
 import { X } from "lucide-react";
 
-const Carrinho = ({ isOpen, closeSideBar }) => {
+const Carrinho = ({ isOpen, closeChart }) => {
     return (
-        <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 p-4 transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+        <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 p-4 transform transition-transform duration-500 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
             <div className="flex justify-between items-center">
                 <h2 className="text-xl font-bold">Carrinho</h2>
-                <button onClick={closeSideBar}>
+                <button onClick={closeChart}>
                     <X size={24} />
                 </button>
             </div>

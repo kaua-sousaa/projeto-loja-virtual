@@ -26,7 +26,7 @@ const Home = () => {
                 <LinhaRoupas titulo="Shorts" item={short}/>
                 <LinhaRoupas titulo="Bones" item={bone}/>
             </div>
-            <div className="mt-32"  >
+            <div >
                 <Footer/>
             </div>
         </div>

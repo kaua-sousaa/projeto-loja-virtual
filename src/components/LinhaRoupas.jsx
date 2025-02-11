@@ -11,7 +11,7 @@ const LinhaRoupas = ({ titulo , item}) => {
               <ChevronLeft size={56}/>
           </button>
         </div>
-        <div className="flex gap-8 md:gap-20 lg:gap-40">
+        <div className="flex gap-8 md:gap-20 lg:gap-40 space-y-9">
           <Roupa img={item}/>
           <Roupa img={item}/>
           <Roupa img={item}/>

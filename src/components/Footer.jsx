@@ -4,7 +4,7 @@ import Instagram from "../assets/instagram.png";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col bg-black h-96">
+    <div className="flex flex-col bg-black h-96 mt-32">
       <div className="flex justify-around pt-12 flex-1">
         <div>
           <h1 className="text-center text-white text-2xl font-normal">REDES SOCIAIS</h1>
