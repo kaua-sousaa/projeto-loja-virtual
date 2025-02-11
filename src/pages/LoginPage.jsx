@@ -38,7 +38,11 @@ const LoginPage = () => {
                 <Input placeholder="TELEFONE" />
               </div>
             </div>
-            <div className="flex justify-center mt-5">
+            <div className="flex justify-center mt-10 space-x-2 items-center">
+                <input type="checkbox" name="" id="" />
+                <span>Concordo em vender a alma para a loja</span>
+            </div>
+            <div className="flex justify-center mt-3">
               <Button className="w-[300px] mt-3 rounded-md">REGISTRAR-SE</Button>
             </div>
           </form>
