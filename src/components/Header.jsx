@@ -24,7 +24,7 @@ const Header = () => {
       <div>
         <ul className="flex space-x-5 text-white font-bold">
           <li>
-            <a href="">ROUPAS</a>
+            <a href="/RoupasPage">CAMISETAS</a>
           </li>
           <li>
             <a href="">ACESSÓRIOS</a>
