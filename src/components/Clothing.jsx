@@ -10,7 +10,7 @@ const Roupa = ( {img, showButtton = true, className} ) => {
                 <p className="text-center text-red-500 font-bold">R$ 99,99</p>
                 <p className="text-center line-through">R$ 299,99</p>
             </div>
-            {showButtton && <Button>COMPRAR</Button>}
+            {showButtton && <Button className="w-3/4">COMPRAR</Button>}
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import { Search, ShoppingCart, User } from "lucide-react";
 import logo_trans from "../assets/logo_trans.png";
 import { useState } from "react";
-import Carrinho from "./Carrinho";
+import Chart from "./Chart";
 import IconLogin from "./IconLogin";
 
 const Header = () => {
@@ -70,7 +70,7 @@ const Header = () => {
       )}
 
       <div className="absolute">
-        <Carrinho isOpen={isOpen} closeChart={closeChart} />
+        <Chart isOpen={isOpen} closeChart={closeChart} />
       </div>
 
       <div className="absolute">
