@@ -2,12 +2,15 @@ import Button from "../components/Button";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Input from "../components/Input";
+import { useCart } from "../context/CartContext";
 
 const LoginPage = () => {
+  const {cart} = useCart()
+
   return (
     <div>
       <div className="sticky top-0">
-        <Header />
+        <Header cart={cart}/>
       </div>
       <div className="flex flex-col items-center">
         <h1 className="text-3xl text-center mt-5">LOGIN</h1>

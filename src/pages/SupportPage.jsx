@@ -2,12 +2,15 @@ import Button from "../components/Button";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Input from "../components/Input";
+import { useCart } from "../context/CartContext";
 
 const SupportPage = () => {
+  const {cart} = useCart();
+
   return (
     <div>
       <div>
-        <Header />
+        <Header cart={cart}/>
       </div>
       <div className="p-10 mt-12 ml-36">
         <h1 className="text-3xl font-medium mb-4">CONTATO</h1>

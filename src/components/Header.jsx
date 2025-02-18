@@ -1,18 +1,18 @@
 import { Search, ShoppingCart, User } from "lucide-react";
 import logo_trans from "../assets/logo_trans.png";
 import { useState } from "react";
-import Chart from "./Chart";
+import Cart from "./Cart";
 import IconLogin from "./IconLogin";
 
-const Header = ({chart, setChart}) => {
+const Header = ({ cart, setCart }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenLogin, setIsOpenLogin] = useState(false);
-  
-  const toggleChart = () => setIsOpen(!isOpen);
-  const closeChart = () => setIsOpen(false);
 
-  const toggleLogin = () => setIsOpenLogin(!isOpenLogin)
-  const closeLogin = () => setIsOpenLogin(false)
+  const toggleCart = () => setIsOpen(!isOpen);
+  const closeCart = () => setIsOpen(false);
+
+  const toggleLogin = () => setIsOpenLogin(!isOpenLogin);
+  const closeLogin = () => setIsOpenLogin(false);
 
   return (
     <div className=" bg-black flex justify-between items-end h-20 px-10 py-7 w-full ">
@@ -33,7 +33,7 @@ const Header = ({chart, setChart}) => {
             <a href="">OFERTAS</a>
           </li>
           <li>
-            <a href="">ATENDIMENTO</a>
+            <a href="/SupportPage">ATENDIMENTO</a>
           </li>
         </ul>
       </div>
@@ -49,32 +49,32 @@ const Header = ({chart, setChart}) => {
             </button>
           </li>
           <li className="text-white">
-            <button className="cursor-pointer" onClick={toggleChart}>
+            <button className="cursor-pointer" onClick={toggleCart}>
               <ShoppingCart />
             </button>
           </li>
         </ul>
       </div>
-      
+
       {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40"
-          onClick={closeChart}
-        />
+        <div className="fixed inset-0 bg-black/50 z-40" onClick={closeCart} />
       )}
 
       {isOpenLogin && (
-        <div className="fixed inset-0 bg-black/50"
-        onClick={closeLogin}
-        />
+        <div className="fixed inset-0 bg-black/50" onClick={closeLogin} />
       )}
 
       <div className="absolute">
-        <Chart isOpen={isOpen} closeChart={closeChart} chart={chart} setChart={setChart}/>
+        <Cart
+          isOpen={isOpen}
+          closeCart={closeCart}
+          cart={cart}
+          setCart={setCart}
+        />
       </div>
 
       <div className="absolute">
-        <IconLogin isOpen={isOpenLogin}/>
+        <IconLogin isOpen={isOpenLogin} />
       </div>
     </div>
   );
