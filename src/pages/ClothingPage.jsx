@@ -1,20 +1,18 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ClothingRow from "../components/ClothingRow";
-import Blusa from "../assets/blusa.png";
-import { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
 import products from "../produtosTemp/ProductsTemp";
 
 const ClothingPage = () => {
-  const {cart, setCart, addCart} = useCart()
+  const { addCart} = useCart()
 
   const tshirts = products.filter(product => product.category === "Camisetas");
 
   return (
     <div>
       <div>
-        <Header cart={cart} setCart={setCart}/>
+        <Header />
       </div>
       <div className="flex justify-center">
         <div className="bg-black h-32 mt-10 w-3/4 rounded-2xl mb-10 flex justify-between items-end p-5">

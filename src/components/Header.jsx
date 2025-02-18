@@ -3,37 +3,38 @@ import logo_trans from "../assets/logo_trans.png";
 import { useState } from "react";
 import Cart from "./Cart";
 import IconLogin from "./IconLogin";
+import { Link } from "react-router-dom";
 
-const Header = ({ cart, setCart }) => {
+const Header = () => {
+
   const [isOpen, setIsOpen] = useState(false);
-  const [isOpenLogin, setIsOpenLogin] = useState(false);
-
   const toggleCart = () => setIsOpen(!isOpen);
   const closeCart = () => setIsOpen(false);
 
+  const [isOpenLogin, setIsOpenLogin] = useState(false);
   const toggleLogin = () => setIsOpenLogin(!isOpenLogin);
   const closeLogin = () => setIsOpenLogin(false);
 
   return (
     <div className=" bg-black flex justify-between items-end h-20 px-10 py-7 w-full ">
       <div>
-        <a href="/">
+        <Link to="/">
           <img src={logo_trans} alt="" />
-        </a>
+        </Link>
       </div>
       <div>
         <ul className="flex space-x-5 text-white font-bold">
           <li>
-            <a href="/ClothingPage">CAMISETAS</a>
+            <Link to="/ClothingPage">CAMISETAS</Link>
           </li>
           <li>
-            <a href="">ACESSÓRIOS</a>
+            <Link to="">ACESSÓRIOS</Link>
           </li>
           <li>
-            <a href="">OFERTAS</a>
+            <Link to="">OFERTAS</Link>
           </li>
           <li>
-            <a href="/SupportPage">ATENDIMENTO</a>
+            <Link to="/SupportPage">ATENDIMENTO</Link>
           </li>
         </ul>
       </div>
@@ -68,8 +69,6 @@ const Header = ({ cart, setCart }) => {
         <Cart
           isOpen={isOpen}
           closeCart={closeCart}
-          cart={cart}
-          setCart={setCart}
         />
       </div>
 

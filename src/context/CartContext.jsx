@@ -7,14 +7,16 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart"));
-
+    console.log("Carrinho carregado do localStorage:", storedCart);
     if (storedCart) {
-      setCart(storedCart);
+      setCart(storedCart); // Atualiza o estado com os dados carregados
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
+    if (cart.length > 0) {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
   }, [cart]);
 
   const addCart = (product) => {
