@@ -1,7 +1,12 @@
-const Button = ({ className, children }) => {
-
+const Button = ({ className, children, onClick }) => {
+    const handleClick = (event) =>{
+        console.log("botao clicado")
+        if (onClick){
+            onClick(event)
+        }
+    }
     return (
-        <button className={`bg-black text-white p-4 font-bold cursor-pointer ${className}`}>{children}</button>
+        <button onClick={handleClick} className={`bg-black text-white p-4 font-bold cursor-pointer ${className}`}>{children}</button>
     )
 }
 

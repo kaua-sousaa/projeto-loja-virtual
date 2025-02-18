@@ -4,7 +4,7 @@ import { useState } from "react";
 import Chart from "./Chart";
 import IconLogin from "./IconLogin";
 
-const Header = () => {
+const Header = ({chart, setChart}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenLogin, setIsOpenLogin] = useState(false);
   
@@ -24,7 +24,7 @@ const Header = () => {
       <div>
         <ul className="flex space-x-5 text-white font-bold">
           <li>
-            <a href="/RoupasPage">CAMISETAS</a>
+            <a href="/ClothingPage">CAMISETAS</a>
           </li>
           <li>
             <a href="">ACESSÓRIOS</a>
@@ -70,7 +70,7 @@ const Header = () => {
       )}
 
       <div className="absolute">
-        <Chart isOpen={isOpen} closeChart={closeChart} />
+        <Chart isOpen={isOpen} closeChart={closeChart} chart={chart} setChart={setChart}/>
       </div>
 
       <div className="absolute">

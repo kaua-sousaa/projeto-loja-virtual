@@ -1,7 +1,8 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Clothing from "./Clothing";
 
-const LinhaRoupas = ({ titulo, item }) => {
+const LinhaRoupas = ({ products, titulo, addChart }) => {
+
   return (
     <div>
       <h1 className="text-4xl text-center mb-7">{titulo}</h1>
@@ -12,9 +13,11 @@ const LinhaRoupas = ({ titulo, item }) => {
           </button>
         </div>
         <div className="flex gap-8 md:gap-20 lg:gap-40 space-y-9">
-          <Clothing img={item} />
-          <Clothing img={item} />
-          <Clothing img={item} />
+          {products.map((product, index)=> (
+            <div key={index}>
+              <Clothing product={product} addChart={addChart} />
+            </div>
+          ))}
         </div>
         <div>
           <button className="cursor-pointer">
